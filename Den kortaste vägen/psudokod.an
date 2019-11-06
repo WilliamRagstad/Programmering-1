@@ -1,0 +1,32 @@
+﻿-- Problem --
+
+    Hitta kortaste vägen mellan två stationer X och Y, som är sammanbundna via
+    andra stationer i andra zoner; U1, U2, U3, ..., Um
+    samt stationerna; V1, V2, V3, ..., Vn.
+
+-- Algoritm --
+
+>> Förvillkor
+
+    En start station X, en 2D matris av mellan stationer[][] och
+    en slutstation Y.
+
+>> Eftervillkor
+
+    En lista med alla stationer längs den kortaste vägen.
+    Samt längden av den kortaste vägen.
+
+>> Steg i algoritmen
+
+    1. Följ och beräkna summan av längderna av alla vägkombinationer.
+    2. Plocka ut den väg (Lista med mellanstationer) som har kortast längd.
+
+
+    [?] Implementera algoritmen i Java
+    [X] Lösa problemet
+
+>> Steg i algoritmen - Psudokod
+
+    shortestPath (double[] a, double[][] b, double[] c) {
+        
+    }
