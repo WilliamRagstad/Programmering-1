@@ -1,15 +1,12 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BestamDenKortasteVagen {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		
-		
+
+		// Example instansiation for m=3, n=3 :
+		// https://docs.google.com/spreadsheets/d/12c6R30eSLYyfMmcx59wiK9RVZ6SO7uvRW-vgnTJojeY
 		
 		Scanner in = new Scanner(System.in);
 		System.out.print("m=");int m = in.nextInt();
@@ -30,19 +27,19 @@ public class BestamDenKortasteVagen {
 		double[]   c = new double[n];
 		
 		for (int i = 0; i < m; i++) {
-			System.out.println("X till U" + i + ": ");
+			System.out.println("X till U" + (i+1) + ": ");
 			a[i] = in.nextDouble();
 		}
 		
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				System.out.println("U" + i + " till V" + j + ": ");
+				System.out.println("U" + (i+1) + " till V" + (j+1) + ": ");
 				b[i][j] = in.nextDouble();
 			}
 		}
 		
 		for (int j = 0; j < m; j++) {
-			System.out.println("V" + j + " till Y: ");
+			System.out.println("V" + (j+1) + " till Y: ");
 			c[j] = in.nextDouble();
 		}
 		
@@ -52,10 +49,14 @@ public class BestamDenKortasteVagen {
 		System.out.println("Och går genom stationerna: ");
 
 		int[] mellanStationer = DenKortasteVagen.Stations(a, b, c);
+		char[] zones = { 'U', 'V' };
+		System.out.print("X -> ");
 		for (int j = 0; j < mellanStationer.length; j++) {
-			System.out.print(mellanStationer[j]);
-			if (j != mellanStationer.length - 1) System.out.print(" -> ");
+			System.out.print(zones[j]);
+			System.out.print(mellanStationer[j]+1); // nollbaserat index
+			System.out.print(" -> ");
 		}
+		System.out.println("Y");
 		
 	}
 }
