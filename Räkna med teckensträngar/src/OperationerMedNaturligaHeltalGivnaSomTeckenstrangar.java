@@ -2,7 +2,8 @@ import java.util.*; // Scanner
 import static java.lang.System.out;
 
 public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
-    public static void main(String[] args) {
+    
+	public static void main(String[] args) {
         out.println("OPERATIONER MED NATURLIGA HELTAL GIVNA SOM TECKENSTRANGAR\n");
         // mata in två naturliga heltal
         Scanner in = new Scanner(System.in);
@@ -11,7 +12,7 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
         String tal2 = in .next();
         out.println();
         // addera heltalen och visa resultatet
-        // visa(tal1, tal2, addera(tal1, tal2), '+');
+        //visa(tal1, tal2, addera(tal1, tal2), '+');
         // subtrahera heltalen och visa resultatet
         visa(tal1, tal2, subtrahera(tal1, tal2), '-');
     }

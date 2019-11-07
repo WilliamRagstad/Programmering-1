@@ -37,8 +37,8 @@ class Temperaturer {
         
         for(int vecka = 1; vecka <= antalVeckor; vecka++) {
         	// Beräkna värden för alla vektorer över
-        	minT[vecka] = Integer.MAX_VALUE;
-            maxT[vecka] = Integer.MIN_VALUE;
+        	minT[vecka] = Double.POSITIVE_INFINITY;
+            maxT[vecka] = Double.NEGATIVE_INFINITY;
             sumT[vecka] = 0;
             medelT[vecka] = 0;
         	for (int matning = 1; matning <= antalMatningarPerVecka; matning++) {
